@@ -71,8 +71,6 @@ After you're finished please remove all the comments and instructions!
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
   <summary>Client</summary>
   <ul>
@@ -98,11 +96,9 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[A Database that stores table of animals]**
+- **[The table holds vital information about the animals]**
+- **[Their names,date of birth, escape attempts,weight of the animals]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,17 +106,13 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](<replace-with-your-deployment-URL>)
+- Live preview will be available soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
@@ -139,64 +131,55 @@ Example command:
 ### Setup
 
 Clone this repository to your desired folder:
+Use git clone command or download ZIP folder
 
-<!--
-Example commands:
-
+To clone:
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone https://github.com/prius2055/vet-clinic-SQL-database.git
 ```
---->
 
 ### Install
 
-Install this project with:
+To run this project, you need to install postgresql.
 
-<!--
-Example command:
 
-```sh
-  cd my-project
-  gem install
-```
---->
+To install, 
+use this [link](https://www.postgresql.org/download/) for the download process
+
 
 ### Usage
 
-To run the project, execute the following command:
+To run the project, execute the following command in the SQL shell
 
-<!--
-Example command:
+To create new database;
 
 ```sh
-  rails server
+  CREATE DATABASE database_name
 ```
---->
+
+To create new table;
+
+```sh
+  CREATE TABLE table_name(
+   column1 datatype,
+   column2 datatype,
+   column3 datatype,
+   .....
+   columnN datatype,
+   PRIMARY KEY( one or more columns )
+);
+```
+For a list of postgres commands, follow this [link](https://www.postgresqltutorial.com/)
 
 ### Run tests
 
-To run tests, run the following command:
-
-<!--
-Example command:
+To check table content
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  SELECT * FROM table_name
 ```
---->
 
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,17 +189,11 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Prince**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@prius2055](https://github.com/prius2055)
+- Twitter: [@prius2055](https://www.twitter.com/prius2055)
+- LinkedIn: [@prius2055](https://www.linkedin.com/prius2055)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -226,9 +203,8 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[Ability to remove data from table]**
+- [ ] **[Ability to merge tables]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -238,7 +214,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [Repository](https://github.com/prius2055/vet-clinic-SQL-database)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -246,9 +222,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project then please follow me on Linkedin, Twitter and GitHub. Greetings!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -256,9 +230,7 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+I would like to thank the Microverse team for putting this project task together!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -268,13 +240,13 @@ I would like to thank...
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+- **[How do I run this project on windows machine?]**
 
-  - [Answer_1]
+  - [Follow the link to the installation guide above and select windows during installation]
 
-- **[Question_2]**
+- **[Can I run this project on a GUI?]**
 
-  - [Answer_2]
+  - [Yes, postgresql comes with a Graphical user interface (GUI) pgAdmin that let's you run the database on a GUI]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -282,8 +254,6 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
