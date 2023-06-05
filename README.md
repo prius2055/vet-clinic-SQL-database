@@ -238,8 +238,6 @@ I would like to thank the Microverse team for putting this project task together
 
 ## ❓ FAQ <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
 - **[How do I run this project on windows machine?]**
 
   - [Follow the link to the installation guide above and select windows during installation]
