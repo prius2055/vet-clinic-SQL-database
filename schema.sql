@@ -8,3 +8,6 @@
     neutered BOOLEAN NOT NULL,
     weight_kg DECIMAL 
 );
+
+/* Adding a column 'species' to the aninals table*/
+ALTER TABLE animals ADD species varchar(20);
