@@ -3,7 +3,6 @@
 > This template should be used for database related projects at Microverse.
 > Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
 
-
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
@@ -35,7 +34,6 @@ REQUIRED SECTIONS:
 
 After you're finished please remove all the comments and instructions!
 -->
-
 
 <!-- TABLE OF CONTENTS -->
 
@@ -98,7 +96,7 @@ After you're finished please remove all the comments and instructions!
 
 - **[A Database that stores table of animals]**
 - **[The table holds vital information about the animals]**
-- **[Their names,date of birth, escape attempts,weight of the animals]**
+- **[Their names,date of birth, escape attempts,weight,species of the animals]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,6 +132,7 @@ Clone this repository to your desired folder:
 Use git clone command or download ZIP folder
 
 To clone:
+
 ```sh
   cd my-folder
   git clone https://github.com/prius2055/vet-clinic-SQL-database.git
@@ -143,19 +142,31 @@ To clone:
 
 To run this project, you need to install postgresql.
 
-
-To install, 
+To install,
 use this [link](https://www.postgresql.org/download/) for the download process
-
 
 ### Usage
 
 To run the project, execute the following command in the SQL shell
 
+To connect to postgresql server.
+
+On your terminal, run;
+
+```sh
+  psql -U postgres
+```
+
 To create new database;
 
 ```sh
   CREATE DATABASE database_name
+```
+
+To switch to your new database;
+
+```sh
+  \c database_name
 ```
 
 To create new table;
@@ -170,6 +181,7 @@ To create new table;
    PRIMARY KEY( one or more columns )
 );
 ```
+
 For a list of postgres commands, follow this [link](https://www.postgresqltutorial.com/)
 
 ### Run tests
@@ -179,7 +191,6 @@ To check table content
 ```sh
   SELECT * FROM table_name
 ```
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
