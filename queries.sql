@@ -38,24 +38,28 @@ WHERE weight_kg >=10.4 AND weight_kg <= 17.3;
 /* TRANSACTION 1 */
 BEGIN;
 UPDATE animals SET species = 'unspecified';
+SELECT * FROM animals
 ROLLBACK;
-
-BEGIN;
-UPDATE animals
-SET species = 'digimon'
-WHERE name LIKE '%mon';
-
-UPDATE animals
-SET species = 'pokeman'
-WHERE species = '';
-COMMIT;
+SELECT * FROM animals;
 
 /* TRANSACTION 2 */
+BEGIN;
+UPDATE animals SET species = 'digimon'
+WHERE name LIKE '%mon';
+UPDATE animals SET species = 'pokeman'
+WHERE species = '';
+SELECT * FROM animals;
+COMMIT;
+SELECT * FROM animals;
+
+/* TRANSACTION 3 */
 BEGIN;
 DELETE FROM animals;
+SELECT * FROM animals;
 ROLLBACK;
+SELECT * FROM animals;
 
-/* TRANSACTION 2 */
+/* TRANSACTION 4 */
 BEGIN;
 DELETE FROM animals
 WHERE date_of_birth > '2022-01-01';
@@ -67,6 +71,7 @@ UPDATE animals
 SET weight_kg = weight_kg * -1
 WHERE weight_kg < 0;
 COMMIT;
+SELECT * FROM animals;
 
 /* How many animals are there? */
 SELECT COUNT (*) FROM animals;
