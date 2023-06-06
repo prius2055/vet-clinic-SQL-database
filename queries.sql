@@ -55,7 +55,7 @@ BEGIN;
 DELETE FROM animals;
 ROLLBACK;
 
-
+/* TRANSACTION 2 */
 BEGIN;
 DELETE FROM animals
 WHERE date_of_birth > '2022-01-01';
