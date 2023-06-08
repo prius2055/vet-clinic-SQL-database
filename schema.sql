@@ -12,30 +12,19 @@
 /* Adding a column 'species' to the aninals table*/
 ALTER TABLE animals ADD species varchar(20);
 
-/* Creating owners table */
-vet_clinic=# CREATE TABLE owners (
-vet_clinic(# id SERIAL PRIMARY KEY,
-vet_clinic(# full_name TEXT,
-vet_clinic(# age INTEGER
-vet_clinic(# );
-CREATE TABLE
-vet_clinic=# CREATE TABLE species (
-vet_clinic(# id SERIAL PRIMARY KEY,
-vet_clinic(# name TEXT
-vet_clinic(# );
-CREATE TABLE
-
 /* Creating species table */
+CREATE TABLE species (
+id SERIAL PRIMARY KEY,
+name TEXT
+);
+
+/* Creating owners table */
 CREATE TABLE owners (
 id SERIAL PRIMARY KEY,
 full_name TEXT,
 age INTEGER
 );
 
-CREATE TABLE species (
-id SERIAL PRIMARY KEY,
-name TEXT
-);
 
 
 /* Modifying animals table */
