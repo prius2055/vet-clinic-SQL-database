@@ -11,3 +11,32 @@
 
 /* Adding a column 'species' to the aninals table*/
 ALTER TABLE animals ADD species varchar(20);
+
+/* Creating species table */
+CREATE TABLE species (
+id SERIAL PRIMARY KEY,
+name TEXT
+);
+
+/* Creating owners table */
+CREATE TABLE owners (
+id SERIAL PRIMARY KEY,
+full_name TEXT,
+age INTEGER
+);
+
+
+
+/* Modifying animals table */
+
+ALTER TABLE animals DROP COLUMN species;
+ALTER TABLE animals ADD species_id INTEGER;
+
+ALTER TABLE animals
+ADD CONSTRAINT fk FOREIGN KEY (species_id) REFERENCES species (id);
+
+ALTER TABLE animals ADD owner_id INTEGER;
+
+ALTER TABLE animals
+ADD CONSTRAINT fk2 FOREIGN KEY (owner_id) REFERENCES owners (id);
+
