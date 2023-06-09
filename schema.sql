@@ -44,8 +44,8 @@ ADD CONSTRAINT fk2 FOREIGN KEY (owner_id) REFERENCES owners (id);
 /* Create a table named vets */
  
 CREATE TABLE vets(
-id SERIAL PRIMARY KEY,
-name TEXT,
+id INTEGER NOT NULL IDENTITY(1,1) PRIMARY KEY,
+name VARCHAR(255),
 age INTEGER,
 date_of_graduation DATE
 );
@@ -53,12 +53,12 @@ date_of_graduation DATE
 /* specializations table */
 CREATE TABLE specializations(
 species_id INTEGER, FOREIGN KEY(species_id) REFERENCES species(id),
-vets_id INTEGER, FOREIGN KEY(vets_id) REFERENCES vets(id)
+vet_id INTEGER, FOREIGN KEY(vet_id) REFERENCES vets(id)
 );
 
 /* visits table */
 CREATE TABLE visits(
 visit_dates DATE NOT NULL,
-animals_id INTEGER, FOREIGN KEY(animals_id) REFERENCES animals(id),
-vets_id INTEGER, FOREIGN KEY(vets_id) REFERENCES vets(id)
+animal_id INTEGER, FOREIGN KEY(animal_id) REFERENCES animals(id),
+vet_id INTEGER, FOREIGN KEY(vet_id) REFERENCES vets(id)
 );
